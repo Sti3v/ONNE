@@ -4,37 +4,127 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="calculatrice.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/f61e49de0b.js" crossorigin="anonymous"
+    ></script>
     <script src="calculatrice.js" defer></script>
-    <title>Calculatrice</title>
+    <link rel="stylesheet" href="calculatrice.css" />
+    <title>Test2</title>
   </head>
   <body>
-    <div class="calculator">
-      <div class="previous-display"></div>
-      <div class="display"></div>
-      <div class="keypad">
-        <button class="number" data-value="7">7</button>
-        <button class="number" data-value="8">8</button>
-        <button class="number" data-value="9">9</button>
-        <button class="operator" data-value="/">/</button>
-        <button class="number" data-value="4">4</button>
-        <button class="number" data-value="5">5</button>
-        <button class="number" data-value="6">6</button>
-        <button class="operator" data-value="*">*</button>
-        <button class="number" data-value="1">1</button>
-        <button class="number" data-value="2">2</button>
-        <button class="number" data-value="3">3</button>
-        <button class="operator" data-value="-">-</button>
-        <button class="number" data-value="0">0</button>
-        <button class="decimal" data-value=".">.</button>
-        <button class="clear">C</button>
-        <button class="operator" data-value="+">+</button>
-        <button class="operator" data-value="(">(</button>
-        <button class="operator" data-value=")">)</button>
-        <button class="delete"><i class="fas fa-backspace"></i></button>
-        <button class="equal" data-value="=">=</button>
+    <main>
+      <div class="contenaire">
+        <div class="calculatrice">
+          <div class="dark">
+            <i class="active"></i>
+          </div>
+          <div class="ecran">
+            <div class="resultat"></div>
+          </div>
+          <div class="touche">
+            <table>
+              <tr>
+                <td>
+                  <button id="clear" class="btn-operation">C</button>
+                </td>
+                <td>
+                  <button id="/" class="btn-operation">
+                    <i class="fa-solid fa-divide"></i>
+                  </button>
+                </td>
+                <td>
+                  <button id="*" class="btn-operation">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </td>
+                <td>
+                  <button id="backspace" class="btn-operation">
+                    <i class="fa-solid fa-delete-left"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button id="7" class="btn-nombre">
+                    <i class="fa-solid fa-7"></i>
+                  </button>
+                </td>
+                <td>
+                  <button id="8" class="btn-nombre">
+                    <i class="fa-solid fa-8"></i>
+                  </button>
+                </td>
+                <td>
+                  <button id="9" class="btn-nombre">
+                    <i class="fa-solid fa-9"></i>
+                  </button>
+                </td>
+                <td>
+                  <button id="-" class="btn-operation">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button id="4" class="btn-nombre">
+                    <i class="fa-solid fa-4"></i>
+                  </button>
+                </td>
+                <td>
+                  <button id="5" class="btn-nombre">
+                    <i class="fa-solid fa-5"></i>
+                  </button>
+                </td>
+                <td>
+                  <button id="6" class="btn-nombre">
+                    <i class="fa-solid fa-6"></i>
+                  </button>
+                </td>
+                <td>
+                  <button id="+" class="btn-operation">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button id="1" class="btn-nombre">
+                    <i class="fa-solid fa-1"></i>
+                  </button>
+                </td>
+                <td>
+                  <button id="2" class="btn-nombre" >
+                    <i class="fa-solid fa-2"></i>
+                  </button>
+                </td>
+                <td>
+                  <button id="3" class="btn-nombre">
+                    <i class="fa-solid fa-3"></i>
+                  </button>
+                </td>
+                <td rowspan="2">
+                  <button id="egal" class="btn-egal">
+                    <i class="fa-solid fa-equals"></i>
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button id="(" class="btn-operation">(</button>
+                </td>
+                <td>
+                  <button id="0" class="btn-nombre">
+                    <i class="fa-solid fa-0"></i>
+                  </button>
+                </td>
+                <td>
+                  <button id=")" class="btn-operation">)</button>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
       </div>
-    </div>
+    </main>
   </body>
 </html>
