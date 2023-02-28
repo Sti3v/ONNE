@@ -22,7 +22,7 @@ function swapImageAndGif() {
           image,
           { scale: 1.2 },
           {
-            duration: 200,
+            duration: 500,
             easing: "ease-out",
             complete: () => {
               image.setAttribute("src", gif);
@@ -41,7 +41,7 @@ function swapImageAndGif() {
           image,
           { scale: 1.0 },
           {
-            duration: 200,
+            duration: 500,
             easing: "ease-out",
             complete: () => {
               image.setAttribute("src", img);
