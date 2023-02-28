@@ -1,3 +1,14 @@
+function preloadImages() {
+  const images = document.querySelectorAll(".swap-element");
+  for (let i = 0; i < images.length; i++) {
+    const gif = images[i].getAttribute("data-gif");
+    const img = new Image();
+    img.src = gif;
+  }
+}
+
+preloadImages();
+
 function swapImageAndGif() {
   const images = document.querySelectorAll(".swap-element");
   let timeout;
@@ -43,14 +54,3 @@ function swapImageAndGif() {
 }
 
 swapImageAndGif();
-
-function preloadImages() {
-  const images = document.querySelectorAll(".swap-element");
-  for (let i = 0; i < images.length; i++) {
-    const gif = images[i].getAttribute("data-gif");
-    const img = new Image();
-    img.src = gif;
-  }
-}
-
-preloadImages();
