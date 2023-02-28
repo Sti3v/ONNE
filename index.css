@@ -2,71 +2,84 @@
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
+
 .princ {
   margin-right: 15%;
   margin-left: 15%;
-  background-color: #6e7888;
+  background-color: rgb(57, 62, 70);
   padding-bottom: 80%;
+  border-radius: 39px;
 }
+
 body {
-  background-color: #1F2030;
+  background-color: rgb(34, 40, 49);
 }
+
 #haut-de-page {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
 }
-.logo{
+
+.logo {
   width: 60px; 
   border-radius: 15px;
   margin: 10px 20px 10px 10px;
 }
+
 .logo:hover {
   opacity: 0.90;
   cursor: pointer;
 }
+
 a {
   text-decoration: none;
   color: black;
   cursor: pointer;
 }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-  grid-gap: 20px;
+  grid-gap: 20px 20px ;
   justify-content: center;
   margin-top: 15px;
 }
+
 .grid img {
   width: 80%;
   border: 4px solid black;  
   border-radius: 10px;
   cursor: pointer;
-  margin: 0 20px;
+  box-sizing: border-box;
 }
+
 #container {
   display: flex;
   align-items: center;
 }
+
 #container img {
   margin: 0 20px;
 }
-#gif {
-  display: none;
-}
+
 #haut-de-page {
-  background-color: rgba(33, 35, 148, 0.445);
-  border-radius: 0px 0px 10px 10px;
+  background-color: rgb(50, 130, 184);
+  border-radius: 50px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.4);
+  transition: 0.5s;
+}
+
+#haut-de-page:hover {
+  scale: 1.01;
 }
 
 
-/* .nav {
-  justify-content: space-between ;
-  display: flex 20%;
-  flex-wrap: nowrap;
-  align-items: center;
-} */
 
 
 
@@ -81,65 +94,3 @@ a {
 
 
 
-
-/* 
-h1 {
-  font-family: 'Nunito', sans-serif;
-} */
-
-
-/* flappy Bird */
-
-/* #flappy-bird-game {
-  position: relative;
-}
-.flappy-bird-img {
-  width: 20%;
-  border-radius: 6px;
-  border: 4px solid black;
-  margin-left: 20px;
-}
-.flappy-bird-gif {
-  width: 20%;
-  display: none;
-  position: absolute;
-  border-radius: 6px;
-  border: 4px solid black;
-  margin-left: 20px;
-}
-.flappy-bird-img:hover + .flappy-bird-gif{
-  display: block;   
-}
-.flappy-bird-img:hover {
-  display: none;
-} */
-
-/* Flappy Bird */
-
-/* snake */
-
-/* #snake-game {
-  position: relative;
-} 
-.snake-img {
-  width: 20%;
-  border-radius: 6px;
-  border: 4px solid black;
-  margin-left: 20px;
-}
-.snake-gif {
-  width: 20%;
-  display: none;
-  position: absolute;
-  border-radius: 6px;
-  border: 4px solid black;
-  margin-left: 20px;
-}
-.snake-img:hover + .snake-gif {
-  display: block;
-}
-.snake-img:hover {
-  display: none;
-} */
-
-/* snake */

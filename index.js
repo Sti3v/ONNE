@@ -1,21 +1,22 @@
 function preloadImages() {
-  const images = document.querySelectorAll(".swap-element");
+  let images = document.querySelectorAll(".swap-element");
+  
   for (let i = 0; i < images.length; i++) {
-    const gif = images[i].getAttribute("data-gif");
-    const img = new Image();
+    let gif = images[i].getAttribute("data-gif");
+    let img = new Image();
     img.src = gif;
   }
 }
 
-preloadImages();
-
+// Swap image on mouse enter and leave event listeners
 function swapImageAndGif() {
-  const images = document.querySelectorAll(".swap-element");
+  let images = document.querySelectorAll(".swap-element");
   let timeout;
-
+  
+  // Add MouseEnter Event Listener
   images.forEach((image) => {
     image.addEventListener("mouseenter", () => {
-      const gif = image.getAttribute("data-gif");
+      let gif = image.getAttribute("data-gif");
       timeout = setTimeout(() => {
         image.style.transition = "transform 0.2s ease-out";
         Velocity(
@@ -29,19 +30,22 @@ function swapImageAndGif() {
             },
           }
         );
-      }, 500);
+      }, 200);
     });
+    
+    // Add MouseLeave Event Listener
     image.addEventListener("mouseleave", () => {
       clearTimeout(timeout);
-      const src = image.getAttribute("src");
-      const img = image.getAttribute("data-img");
+      
+      let src = image.getAttribute("src");
+      let img = image.getAttribute("data-img");
       if (src !== img) {
         image.style.transition = "transform 0.2s ease-out";
         Velocity(
           image,
           { scale: 1.0 },
           {
-            duration: 500,
+            duration: 200,
             easing: "ease-out",
             complete: () => {
               image.setAttribute("src", img);
@@ -53,4 +57,10 @@ function swapImageAndGif() {
   });
 }
 
-swapImageAndGif();
+// Call the swap image and preload image functions
+function imageSwapAndPreload() {
+  preloadImages();
+  swapImageAndGif();
+}
+
+imageSwapAndPreload();
