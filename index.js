@@ -7,7 +7,7 @@ function preloadImages() {
     img.src = gif;
   }
 }
-
+let hello = "Hello World" ;
 // Swap image on mouse enter and leave event listeners
 function swapImageAndGif() {
   let images = document.querySelectorAll(".swap-element");
